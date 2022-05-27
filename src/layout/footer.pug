@@ -15,23 +15,24 @@ include /../components/_list
     ]
 
 footer.border-t.border-gray-100.m-auto.px-4
-    .max-w-6xl.mx-auto.py-12.text-gray-800
-        .grid.gap-3(class="md:grid-cols-4")
-            div
-                img(src='/img/logo.png').h-14.mb-3
-                p We are a team of designers and developers that create high quality eCommerce, WordPress, Shopify.
-            div
-                h3.text-gray-800.font-semibold.mb-3 Services
-                +list(footerLinks)
-            div
-                h3.text-gray-800.font-semibold.mb-3 Services
-                +list(footerLinks)
-            div
-                h3.text-gray-800.font-semibold.mb-3 Location
-                ul.mb-3
-                +list(address)
-                +socials
+    .container.mx-auto
+        .py-12.text-gray-800
+            .grid.gap-3(class="md:grid-cols-4")
+                div
+                    img(src='/img/logo.png').h-14.mb-3
+                    p We are a team of designers and developers that create high quality eCommerce, WordPress, Shopify.
+                div
+                    h3.text-gray-800.font-semibold.mb-3 Services
+                    +list(footerLinks)
+                div
+                    h3.text-gray-800.font-semibold.mb-3 Services
+                    +list(footerLinks)
+                div
+                    h3.text-gray-800.font-semibold.mb-3 Location
+                    ul.mb-3
+                    +list(address)
+                    +socials
 
 
-    .max-w-6xl.mx-auto.pb-6.text-gray-800
-        span Copyright © 2022 CBDE . All Rights Reserved
+        .max-w-6xl.mx-auto.pb-6.text-gray-800
+            span Copyright © 2022 CBDE . All Rights Reserved

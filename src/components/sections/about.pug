@@ -6,12 +6,12 @@
         {id: 4, icon: 'fa-solid fa-hand-holding-droplet', name: 'Easy', desc: 'Lorem ipsum dolor sit amet, consectetur adi'},
     ]
 
-section.max-w-6xl.px-4.m-auto.py-16(class='lg:py-24')
+section.px-4.m-auto.py-12
     .container.mx-auto
-        .items-center(class="md:grid md:grid-cols-12")
-            .col-span-5
+        .items-center(class="lg:grid lg:grid-cols-12")
+            .hidden.col-span-5(class="lg:block")
                 img.rounded-lg(src='/img/about.jpg' alt='about')
-            .col-start-7.col-span-6
+            .div(class="lg:col-start-7 lg:col-span-6")
                 h3.text-gray-800.text-3xl.font-medium.mb-5.mt-3(class="md:mt-0") Welcome To Our Shop
                 p
                     | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -19,8 +19,9 @@ section.max-w-6xl.px-4.m-auto.py-16(class='lg:py-24')
                     | veniam, quis nostrud exercitation.
                 .grid.gap-6.mt-8(class="md:grid md:grid-cols-2")
                     each about in abouts
-                        .flex.items-center
-                            i.text-4xl.text-primary(class=`${about.icon}`)
-                            .ml-3
+                        .flex.items-center.gap-3
+                            div.w-10.mr-3
+                                i.text-4xl.text-primary(class=`${about.icon}`)
+                            .div
                                 h3.text-gray-800.font-medium.text-lg= about.name
                                 p.text-gray-500= about.desc

@@ -6,11 +6,11 @@
         {id: 4, icon: 'fa-solid fa-flask', name: 'Safe for health', desc: "Consectetur adipiscing elit."}
     ];
 
-section.px-4.m-auto.pt-12
-    .max-w-6xl.mx-auto.border.border-gray-200.rounded-lg
-        .grid.gap-3(class='sm:grid-cols-2 lg:grid-cols-4')
+section.m-auto.py-12
+    .container.mx-auto
+        .grid.gap-5.px-4.py-6.border.border-gray-200.rounded-lg(class='sm:grid-cols-2 xl:grid-cols-4')
             each deliver in delivers
-                .flex.justify-center.items-center.py-6(class=deliver.id < 4 && "border-r border-gray-200 md:justify-center")
+                .flex.items-center(class=`${deliver.id < 4 && "xl:border-r xl:border-gray-200"} ${deliver.id%2 && "sm:border-r sm:border-gray-200"} sm:justify-center`)
                     i.text-3xl.text-gray-400(class=`${deliver.icon}`)
                     .ml-3
                         h3.font-medium= deliver.name

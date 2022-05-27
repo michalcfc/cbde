@@ -25,9 +25,9 @@
         {id: 5, name: 'Contact', uri: ''}
     ]
 
-header.bg-white.px-4(class="lg:px-0")
-    .max-w-6xl.mx-auto
-        .border-b.border-gray-200.mb-2.py-2.text-gray-500
+header.bg-white
+    .container.mx-auto
+        .hidden.border-b.border-gray-200.text-gray-500.py-2(class="md:block")
             .flex.items-center.justify-between
                 +socials
                 .flex.items-center.justify-end
@@ -37,13 +37,11 @@ header.bg-white.px-4(class="lg:px-0")
                     .flex.items-center
                         i.fa-solid.fa-envelope.text-md.mr-3
                         span info@gmail.com
-        .flex.items-center.justify-between.pb-4
+        .flex.items-center.justify-between.py-3
             div
-                img.h-14(src='img/logo.png')
+                img.h-12(src='img/logo.png')(class="md:h-14")
             div.flex.align-center
-                nav#menu.text-gray-600.mr-4
-                    button.block(class='md:hidden')
-                        i.text-xl.fa-solid.fa-bars
+                nav#menu.text-gray-800.mr-4
                     ul.hidden(class='md:flex')
                         each link in links
                             li.relative.mr-6(class=`${link.submenu && 'dropdown'} hover:cursor-pointer`)
@@ -59,4 +57,6 @@ header.bg-white.px-4(class="lg:px-0")
                                                     a(href=`${l.uri}`)(class="hover:text-primary")= l.name
                 .relative(class='hover:cursor-pointer')
                     span.text-xs.grid.place-items-center.w-5.h-5.absolute.-top-3.-right-3.bg-primary.rounded-full.text-white 3
-                    i.text-2xl.text-gray-500.fa-solid.fa-basket-shopping
+                    i.text-2xl.text-gray-600.fa-solid.fa-basket-shopping
+                button.ml-8.block(class='md:hidden')
+                    i.text-xl.fa-solid.fa-bars
