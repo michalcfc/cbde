@@ -1,0 +1,29 @@
+include ./../_reviews
+-
+    const reviews = [
+        {id: 1, name: 'Item One', desc: 'Lorem ipsum dolor sit amet, consetetur exit sadipscing elitr, sed diam.', author: "Monic", img: '/img/stress.jpg'},
+        {id: 2, name: 'Item One', desc: 'Lorem ipsum dolor sit amet, consetetur exit sadipscing elitr, sed diam.', author: "Monic", img: '/img/stress.jpg'},
+        {id: 3, name: 'Item One', desc: 'Lorem ipsum dolor sit amet, consetetur exit sadipscing elitr, sed diam.', author: "Monic", img: '/img/stress.jpg'}
+    ];
+
+section.px-4.m-auto.py-16(class='lg:24')
+    .max-w-6xl.mx-auto
+        h3.text-gray-600.text-3xl.font-medium.mb-5.text-center Our Customer Say
+        .grid.gap-6(class='md:grid-cols-3')
+            each review in reviews
+                .relative.rounded-lg.p-4.bg-secondary
+                    i.fa-solid.fa-quote-right.absolute.top-3.right-3.text-gray-500.opacity-10.text-6xl
+                    p.italic.text-gray-500.mb-3= review.desc
+                    .flex.align-center.mt-6
+                        img.object-cover.w-10.rounded-full.mr-3(src='/img/stress.jpg')
+                        div
+                            span.text-left= review.author
+                            .flex.align-center.mr-2
+                                each val in [1, 2, 3, 4, 5]
+                                    i.fa-solid.fa-star.text-xs.text-yellow-400
+        .flex.items-center.justify-center.mt-8
+            each dot in [1, 2, 3]
+                if dot === 2
+                    span.h-2.w-2.bg-primary.rounded-full.mx-1.px-3
+                else
+                    span.h-2.w-2.bg-gray-300.rounded-full.mx-1

@@ -1,0 +1,8 @@
+mixin list(items)
+    ul.mb-3
+        each item in items
+            if(!item.uri)
+                li.pb-2= item.name
+            else
+                li.pb-2
+                    a(href=`${item.uri}`)(class="hover:text-gray-500")= item.name

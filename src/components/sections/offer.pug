@@ -1,0 +1,21 @@
+-
+    const offers = [
+        {id: 1, name: 'Original Cotton Sneaker', desc: '/img/products/lemon-kush.jpg', img: '/img/products/lemon-kush.jpg', uri: ''},
+        {id: 2, name: 'Original Cotton Sneaker', desc: '/img/products/lemon-kush.jpg', img: '/img/products/lemon-kush.jpg', uri: '', size: 'lg'},
+        {id: 3, name: 'Original Cotton Sneaker', desc: '/img/products/lemon-kush.jpg', img: '/img/products/lemon-kush.jpg', uri: '', size: 'lg'},
+        {id: 4, name: 'Original Cotton Sneaker', desc: '/img/products/lemon-kush.jpg', img: '/img/products/lemon-kush.jpg', uri: ''}
+    ];
+
+section.px-4.m-auto.py-12
+    .max-w-6xl.mx-auto
+        .grid.place-items-center.mb-8
+            .max-w-xl.text-center
+                h3.text-gray-600.text-3xl.font-medium.mb-2 Our offer
+                p.text-gray-500.text-md See all our popular products in this week. You can choose your daily needs products from this list and get some special offer with free shipping.
+        .grid.gap-6(class="md:grid-cols-12")
+            each offer, id in offers
+                .h-72.w-100.bg-cover.rounded-lg.p-6(style="background-image: url('img/offer/offer.webp')")(class=`${offer.size === 'lg' ? 'md:col-span-7' : 'md:col-span-5'} hover:cursor-pointer`)
+                    .max-w-sm.h-full.flex.flex-col.gap-3.justify-end.mt-auto.text-white
+                        h3.text-3xl.font-semibold Original Cotto
+                        p Cut the halves into smaller pieces and place in a large pot of water with a steam.
+                        a(href="").text-primary.text-underline Shop now >

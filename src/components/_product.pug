@@ -1,0 +1,17 @@
+mixin product(product)
+    .div(class="hover:cursor-pointer")
+        .relative.bg-secondary.p-3.rounded(class="hover:bg-gray-50")
+            if product.id === 1
+                span.absolute.text-white.text-xs.bg-primary.rounded-lg.py-1.px-2 NEW
+            else if product.id === 3
+                span.absolute.text-white.text-xs.bg-red-400.rounded-lg.py-1.px-2 -40%
+            .grid.place-items-center
+                img(src=`${product.img}`).h-40
+        .flex.flex-col.mt-3
+            .flex.items-center.justify-between.mr-2
+                p.text-gray-700= product.name
+                .flex.items-center
+                    i.fa-solid.fa-star.text-yellow-400
+                    .text-gray-500 4.95
+            span.text-sm.text-gray-400= product.size
+            span.text-lg.text-primary.font-semibold= product.price

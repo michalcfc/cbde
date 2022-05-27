@@ -1,0 +1,62 @@
+-
+    const links = [
+        {
+            id: 1,
+            name: 'Products',
+            submenu: [
+                {
+                    id: 1, name: 'Subpage one', uri: '/product'
+                }
+            ],
+            uri: ''
+        },
+        {
+            id: 2,
+            name: 'Pages',
+            submenu: [
+                {
+                    id: 1, name: 'Product', uri: '/product'
+                }
+            ],
+            uri: ''
+        },
+        {id: 3, name: 'About us', uri: ''},
+        {id: 4, name: 'Blog', uri: ''},
+        {id: 5, name: 'Contact', uri: ''}
+    ]
+
+header.bg-white.px-4(class="lg:px-0")
+    .max-w-6xl.mx-auto
+        .border-b.border-gray-200.mb-2.py-2.text-gray-500
+            .flex.items-center.justify-between
+                +socials
+                .flex.items-center.justify-end
+                    .flex.items-center.mr-6
+                        i.fa-solid.fa-phone.text-md.mr-3
+                        span 184 4532 412
+                    .flex.items-center
+                        i.fa-solid.fa-envelope.text-md.mr-3
+                        span info@gmail.com
+        .flex.items-center.justify-between.pb-4
+            div
+                img.h-14(src='img/logo.png')
+            div.flex.align-center
+                nav#menu.text-gray-600.mr-4
+                    button.block(class='md:hidden')
+                        i.text-xl.fa-solid.fa-bars
+                    ul.hidden(class='md:flex')
+                        each link in links
+                            li.relative.mr-6(class=`${link.submenu && 'dropdown'} hover:cursor-pointer`)
+                                if (!link.submenu)
+                                    a.font-medium(href=`${link.uri}`)(class="hover:text-primary")= link.name
+                                else
+                                    button.font-medium= link.name
+                                    i.fa-solid.fa-chevron-down.text-md.ml-2
+                                    ul.dropdown-content.hidden.absolute.w-2xl.top-10.shadow.rounded-lg.bg-white.py-2.px-6
+                                        each l in link.submenu
+                                            .flex.flex-col
+                                                li
+                                                    a(href=`${l.uri}`)(class="hover:text-primary")= l.name
+                .relative(class='hover:cursor-pointer')
+                    span.text-xs.grid.place-items-center.w-5.h-5.absolute.-top-3.-right-3.bg-primary.rounded-full.text-white 3
+                    i.text-2xl.text-gray-500.fa-solid.fa-basket-shopping

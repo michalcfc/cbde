@@ -1,0 +1,17 @@
+-
+    const delivers = [
+        {id: 1, icon: 'fa-solid fa-truck-fast', name: 'Fast home delivery', desc: "Consectetur adipiscing elit."},
+        {id: 2, icon: 'fa-solid fa-shield-halved', name: 'Safe payments', desc: "Consectetur adipiscing elit."},
+        {id: 3, icon: 'fa-solid fa-headset', name: 'Customer support 24/7', desc: "Consectetur adipiscing elit."},
+        {id: 4, icon: 'fa-solid fa-flask', name: 'Safe for health', desc: "Consectetur adipiscing elit."}
+    ];
+
+section.px-4.m-auto.pt-12
+    .max-w-6xl.mx-auto.border.border-gray-200.rounded-lg
+        .grid.gap-3(class='sm:grid-cols-2 lg:grid-cols-4')
+            each deliver in delivers
+                .flex.justify-center.items-center.py-6(class=deliver.id < 4 && "border-r border-gray-200 md:justify-center")
+                    i.text-3xl.text-gray-400(class=`${deliver.icon}`)
+                    .ml-3
+                        h3.font-medium= deliver.name
+                        p.text-sm.text-gray-500= deliver.desc

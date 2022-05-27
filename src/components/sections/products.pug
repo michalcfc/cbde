@@ -1,0 +1,25 @@
+include ./../_product
+
+-
+    const products = [
+        {id: 1, name: 'Cas Meque Metus', price: "$26.00", size: "240g", img: '/img/products/product.png'},
+        {id: 2, name: 'Donec Ac Tempus', price: "$26.00", size: "240g", img: '/img/products/product.png'},
+        {id: 3, name: 'Lorem Ipsum Lec', price: "$26.00", size: "240g", img: '/img/products/product.png'},
+        {id: 4, name: 'Fusce Aliquam', price: "$26.00", size: "240g", img: '/img/products/product.png'},
+        {id: 5, name: 'Cas Meque Metus', price: "$26.00", size: "240g", img: '/img/products/product.png'},
+        {id: 6, name: 'Donec Ac Tempus', price: "$26.00", size: "240g", img: '/img/products/product.png'},
+        {id: 7, name: 'Lorem Ipsum Lec', price: "$26.00", size: "240g", img: '/img/products/product.png'},
+        {id: 8, name: 'Fusce Aliquam', price: "$26.00", size: "240g", img: '/img/products/product.png'}
+    ];
+
+section.px-4.m-auto.py-12
+    .max-w-6xl.mx-auto
+        .grid.place-items-center.mb-8
+            .max-w-xl.text-center
+                h3.text-gray-600.text-3xl.font-medium.mb-2 Popular Products
+                p.text-gray-500.text-md See all our popular products in this week. You can choose your daily needs products from this list and get some special offer with free shipping.
+        .grid.gap-6(class="sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4")
+            each product in products
+                +product(product)
+        .grid.place-items-center.mt-12
+            +btn-outline-primary('Show more')

@@ -1,0 +1,37 @@
+include ./../components/_link
+include /../components/_list
+-
+    const footerLinks = [
+        {id: 1, name: 'Privacy Policy', uri: ''},
+        {id: 2, name: 'Custom Service', uri: ''},
+        {id: 3, name: 'Terms & Condition', uri: ''},
+        {id: 4, name: 'Advanced Search', uri: ''}
+    ]
+-
+    const address = [
+        {id: 1, name: "962 Fifth Avenue, 3rd Floor New York, NY10022"},
+        {id: 2, name: "contact@domain.com"},
+        {id: 3, name: "(+123) 456 78910"}
+    ]
+
+footer.border-t.border-gray-100.m-auto.px-4
+    .max-w-6xl.mx-auto.py-12.text-gray-800
+        .grid.gap-3(class="md:grid-cols-4")
+            div
+                img(src='/img/logo.png').h-14.mb-3
+                p We are a team of designers and developers that create high quality eCommerce, WordPress, Shopify.
+            div
+                h3.text-gray-800.font-semibold.mb-3 Services
+                +list(footerLinks)
+            div
+                h3.text-gray-800.font-semibold.mb-3 Services
+                +list(footerLinks)
+            div
+                h3.text-gray-800.font-semibold.mb-3 Location
+                ul.mb-3
+                +list(address)
+                +socials
+
+
+    .max-w-6xl.mx-auto.pb-6.text-gray-800
+        span Copyright © 2022 CBDE . All Rights Reserved

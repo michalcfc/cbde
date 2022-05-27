@@ -1,0 +1,11 @@
+mixin review(review)
+    relative.rounded-lg.p-4.bg-secondary
+        i.fa-solid.fa-quote-right.absolute.top-3.right-3.text-gray-500.opacity-10.text-6xl
+        p.italic.text-gray-500.mb-3= review.desc
+        .flex.align-center.mt-6
+            img.object-cover.w-10.rounded-full.mr-3(src='/img/stress.jpg')
+            div
+                span.text-left= review.author
+                .flex.align-center.mr-2
+                    each val in [1, 2, 3, 4, 5]
+                        i.fa-solid.fa-star.text-xs.text-yellow-400

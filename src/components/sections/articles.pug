@@ -1,0 +1,38 @@
+include ./../_article
+
+-
+    const articles = [
+        {
+            id: 1,
+            name: 'Lorem ipsum dolor sit amet,  elit. Impedit, aliquam animi, saepe ex.',
+            desc: 'Lorem ipsum dolor sit amet, consetetur exit sadipscing elitr, sed diam.',
+            img: '/img/posts/post_one.jpg',
+            author: "Tymoteusz",
+            date: "26.05.2022",
+            avatar: '/img/users/tymo.jpeg'
+        },
+        {
+            id: 2,
+            name: 'Lorem ipsum dolor sit amet,  elit. Impedit, aliquam animi, saepe ex.',
+            desc: 'Lorem ipsum dolor sit amet, consetetur exit sadipscing elitr, sed diam.',
+            img: '/img/posts/post_one.jpg',
+            author: "Tymoteusz",
+            date: "26.05.2022",
+            avatar: '/img/users/tymo.jpeg'
+        }, {
+            id: 3,
+            name: 'Lorem ipsum dolor sit amet,  elit. Impedit, aliquam animi, saepe ex.',
+            desc: 'Lorem ipsum dolor sit amet, consetetur exit sadipscing elitr, sed diam.',
+            img: '/img/posts/post_one.jpg',
+            author: "Tymoteusz",
+            date: "26.05.2022",
+            avatar: '/img/users/tymo.jpeg'
+        },
+    ];
+
+section.px-4.m-auto.py-12
+    .max-w-6xl.mx-auto
+        h3.text-gray-600.text-3xl.font-medium.mb-5.text-center Latest News
+        .grid.gap-6(class="sm:grid-cols-2 lg:grid-cols-3")
+            each article in articles
+                +article(article)

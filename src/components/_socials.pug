@@ -1,0 +1,12 @@
+-
+    const socials = [
+        {id: 1, name: "facebook", icon: 'fa-brands fa-facebook-f', uri: ''},
+        {id: 2, name: 'twitter', icon: 'fa-brands fa-twitter', uri: ''},
+        {id: 3, name: 'instagram', icon: 'fa-brands fa-instagram', uri: ''},
+        {id: 4, name: 'google', icon: 'fa-brands fa-google-plus', uri: ''}
+    ];
+
+mixin socials
+    .flex.items-center
+        each social in socials
+            i(class=`${social.icon}`).text-xl.text-gray-500.mr-3(class="hover:text-primary hover:cursor-pointer")
