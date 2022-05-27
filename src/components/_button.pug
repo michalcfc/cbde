@@ -1,5 +1,5 @@
-mixin btn-primary(name)
-    button.text-white.font-medium.text-lg.bg-primary.rounded-lg.px-6.py-3(class='hover:bg-green-500')= name
+mixin btn-primary(name, className)
+    button.text-white.font-medium.text-lg.bg-primary.rounded-lg.px-6.py-3(class=`${className} hover:bg-green-500`)= name
 
-mixin btn-outline-primary(name)
-    button.text-primary.text-xl.border.border-primary.py-2.px-6.rounded(class='hover:bg-primary hover:text-white')= name
+mixin btn-outline-primary(name, className)
+    button.w-full.text-primary.text-xl.border.border-primary.py-2.px-6.rounded(class=`${className} sm:w-auto hover:bg-primary hover:text-white`)= name

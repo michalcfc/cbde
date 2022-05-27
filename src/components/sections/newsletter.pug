@@ -1,9 +1,8 @@
-section.bg-center.bg-cover.px-4.m-auto.py-14(style="background-image: url('/img/banner2.jpg');")
+section.bg-center.bg-cover.m-auto.py-14(style="background-image: url('/img/banner2.jpg');")
     .container.mx-auto.items-center(class="lg:grid md:grid-cols-2")
-        .div.max-w-lg
+        .div(class="md:max-w-lg")
             h3.text-gray-800.mt-3.text-4xl.font-medium.mb-3 Subscribe To Our Newsletter
             p.text-gray-700.mb-5 Receive $20 coupon for the first Shopping
-        div
-            .flex.-align-center
-                +input
-                +btn-primary('Subscribe')
+        div.flex.flex-col(class="sm:flex-row sm:items-center")
+            +input("", "mb-2 sm:mr-3 sm:mb-0")
+            +btn-primary('Subscribe')
